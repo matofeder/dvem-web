@@ -9,6 +9,8 @@ html {
     padding-right: 2px;
 }
 
+/*colors 6dbe01a1 f6f3a2b8*/
+
 /*.footer-position {*/
     /*position: absolute;*/
     /*bottom: 0;*/
@@ -29,16 +31,14 @@ html {
     margin-bottom: 1rem;
     border-radius: 0.3rem;
     min-height: 500px;
-    filter: none !important;
 }
 
 .jumbotron-pages {
-    background: #6dbe01a1;
+    background: #a2d45e;
     padding: 1rem 1rem;
     margin-top: 4rem;
     border-radius: 0.3rem;
     min-height: 100px;
-    filter: none !important;
 }
 
 /*.jumbotron-pages-move {*/
@@ -50,12 +50,11 @@ html {
 /*}*/
 
 .jumbotron-yellow {
-    background: #f6f3a2b8;
+    background: #f8f5ba;
     padding: 1rem 1rem;
     margin-bottom: 2rem;
     border-radius: 0.3rem;
     min-height: 40px;
-    filter: none !important;
 }
 
 .navbar a.nav-link {
@@ -66,25 +65,21 @@ html {
 .navbar a:hover  {
   background: inherit;
   font-weight: bold;
-  filter: none !important;
 }
 
 .navbar a:active  {
   background: inherit;
   font-weight: bold;
-  filter: none !important;
 }
 
 
 .services {
-    background: #f6f3a2b8;
+    background: #f8f5ba;
     max-width: content-box;
-    filter: none !important;
 }
 
 .services-intro {
-    background: #6dbe01a1;
-    filter: none !important;
+    background: #a2d45e;
     /*background-image: linear-gradient(to bottom right, #6dbe01a1, yellow);*/
 }
 
@@ -100,12 +95,10 @@ a:hover .service-title {
 .nav-tabs > li > a:active,
 .nav-tabs > li > a:focus,
 .nav-tabs > li > a:hover {
-  background-color: #f6f3a2b8 !important;
-  filter: none !important;
+  background-color: #f8f5ba !important;
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-    background-color: #f6f3a2b8;
-    filter: none !important;
+    background-color: #f8f5ba;
 }
 

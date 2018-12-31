@@ -1,0 +1,101 @@
+html {
+  overflow-y: scroll;
+}
+.container {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/*.footer-position {*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*left: 0;*/
+    /*right: 0;*/
+/*}*/
+
+.jumbotron-main {
+    background: url("../images/dvem_bg.jpg") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding: 1rem 1rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    min-height: 500px;
+}
+
+.jumbotron-pages {
+    background: #6dbe01a1;
+    padding: 1rem 1rem;
+    margin-top: 4rem;
+    border-radius: 0.3rem;
+    min-height: 100px;
+}
+
+/*.jumbotron-pages-move {*/
+    /*background: #6dbe01a1;*/
+    /*padding: 1rem 1rem;*/
+    /*margin-bottom: 1rem;*/
+    /*border-radius: 0.3rem;*/
+    /*min-height: 120px;*/
+/*}*/
+
+.jumbotron-yellow {
+    background: #f6f3a2b8;
+    padding: 1rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    min-height: 40px;
+}
+
+.navbar a.nav-link {
+    /*color: white !important;*/
+    font-size: 1.3em !important;
+}
+
+.navbar a:hover  {
+  background: inherit;
+  font-weight: bold;
+}
+
+.navbar a:active  {
+  background: inherit;
+  font-weight: bold;
+}
+
+
+.services {
+    background: #f6f3a2b8;
+    max-width: content-box;
+
+}
+
+.services-intro {
+    background: #6dbe01a1;
+    /*background-image: linear-gradient(to bottom right, #6dbe01a1, yellow);*/
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover .service-title {
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.nav-tabs > li > a:active,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover {
+  background-color: #f6f3a2b8 !important;
+}
+
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background-color: #f6f3a2b8;
+}
+

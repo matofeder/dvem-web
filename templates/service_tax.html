@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div id="content" class="container">
+
+    <div id="navigation-jumbo" class="jumbotron jumbotron-pages">
+        <h1 id="navigation-title" class="text-center mt-5 text-white font-weight-bold">DANE</h1>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-9">
+
+            <ul>
+                <li>
+                    <strong>Registrácia</strong> podnikateľských subjektov k všetkým druhom daní
+                </li>
+                <li>
+                    Posúdenie daňových povinností z pohľadu DPH, ako aj dane z príjmov
+                </li>
+                <li>
+                    Spracovanie daňových priznaní k DPH, dani z príjmov právnických a fyzických osôb, dani z motorových
+                    vozidiel
+                </li>
+                <li>
+                    Mailové a telefonické poradenstvo
+                </li>
+                <li>
+                    <strong>Informácie o významných zmenách</strong> v daňovej oblasti je v cene služieb pre každého
+                    nášho klienta
+                </li>
+                <li>
+                    Spracovanie priznania k <strong>dani z príjmov právnických osôb</strong> na základe nimi vedeného
+                    účtovníctva
+                </li>
+                <li>
+                    Spracovanie priznania k <strong>dani z príjmov fyzických osôb</strong> podľa jednotlivých druhov
+                    príjmov
+                </li>
+                <li>
+                    <strong>Vybavenie elektronického prístupu</strong> na portál finančnej správy a zasielanie priznaní,
+                    hlásení a všetkej dokumentácie v mene klienta správcovi dane
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <div class="row mb-4">
+                <img class="flex-auto d-md-block rounded" alt="Účtovníctvo"
+                     style="width: 95%; height: 50%; min-height: 250px;"
+                     src="{{ url_for('static', filename='images/dane.jpg') }}">
+            </div>
+
+            <div class="row mb-4">
+                <!--<img class="flex-auto d-md-block rounded" alt="Účtovníctvo"-->
+                <!--style="width: 96%; height: 50%;"-->
+                <!--src="{{ url_for('static', filename='images/ucto.jpg') }}">-->
+
+                <!-- Sliding div starts here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div id="content" class="container">
+
+    <div id="navigation-jumbo" class="jumbotron jumbotron-pages">
+        <h1 id="navigation-title" class="text-center mt-5 text-white font-weight-bold">KONTAKTY</h1>
+    </div>
+
+    <div class="row mb-2 ml-4">
+        <div class="col-md-4">
+
+            <h4 class="text-justify font-weight-bold mb-4">
+                Fakturačné údaje
+            </h4>
+
+            <div>
+                <h4>DVEM s.r.o.</h4>
+                Suvorovova 28, 902 01 Pezinok <br>
+                <strong>IČO:</strong> 51972956 <br>
+                <strong>DIČ:</strong> 2120847619 <br>
+
+            </div>
+
+            <h4 class="text-justify font-weight-bold mb-4 mt-4">
+                Štatutári
+            </h4>
+            <div>
+                <ul>
+                    <li>
+                        Martina Lošonská
+                    </li>
+                    <li>
+                        Miriam Grusová
+                    </li>
+                </ul>
+            </div>
+
+            <h4 class="text-justify font-weight-bold mb-4">
+                Kontaktujte nás
+            </h4>
+            <img src="{{ url_for('static', filename='icons/mail.svg') }}" width="17" height="17"
+                 class="d-inline-block align-content-center mb-1" alt="Účtovníctvo DVEM s.r.o.">
+            <strong>Email:</strong> <a href="mailto:uctovnictvo.dvem@gmail.com">
+            uctovnictvo.dvem@gmail.com
+        </a>
+            <br>
+            <div class="mt-3">
+                <img src="{{ url_for('static', filename='icons/call.svg') }}" width="17" height="17"
+                     class="d-inline-block align-content-center mb-1">
+
+                <strong>Telefón:</strong> 0903 185 864, 0903 846 201
+
+            </div>
+            <br>
+
+        </div>
+        <div class="col-md-8">
+
+            <h4 class="text-center text-justify font-weight-bold">Napíšte nám</h4><br/>
+
+            <form action="{{ url_for('form_data') }}" method="post">
+                <input class="form-control" name="name" placeholder="Meno..."
+                       oninvalid="this.setCustomValidity('Prosím vyplnte povinné pole')"
+                       oninput="setCustomValidity('')" required><br/>
+                <input class="form-control" name="phone" placeholder="Telefón..."/><br/>
+                <input class="form-control" name="email" type="email" placeholder="E-mail..."
+                       oninvalid="this.setCustomValidity('Prosím zadajte platný E-mail')"
+                       oninput="setCustomValidity('')" required><br/>
+                <textarea class="form-control" name="text" placeholder="Ako vám pomôžeme?"
+                          style="height:150px;"
+                          oninvalid="this.setCustomValidity('Prosím vyplnte povinné pole')"
+                          oninput="setCustomValidity('')" required></textarea><br/>
+                {% if email_sent %}
+                    <span style="color: #52B600">
+                        <strong>Vaša správa bola odoslaná. Ďakujeme!</strong>
+                    </span>
+                {% endif %}
+
+                <input class="btn btn-primary float-right" type="submit" value="Odoslať"/><br/><br/>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div id="content" class="container">
+
+    <div id="navigation-jumbo" class="jumbotron jumbotron-pages">
+        <h1 id="navigation-title" class="text-center mt-5 text-white font-weight-bold">MZDY A PERSONALISTIKA</h1>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-9">
+
+            <ul>
+                <li>
+                    Mzdy spracovávame v programe <strong>MRP</strong>
+                </li>
+                <li>
+                    Mesačné spracovanie miezd, elektronické zaslanie výstupov - výplatné pásky
+                    a príkaz na úhradu zodpovednej osobe vo firme
+                </li>
+                <li>
+                    <strong>Zasielanie výplatných pások</strong> v mene zamestnávateľa priamo zamestnancom, či už
+                    poštou,
+                    alebo na email, možnosť <strong>zaheslovania</strong> výplatnej pásky
+                </li>
+                <li>
+                    Na základe udelenej plnej moci <strong>zasielanie mesačných hlásení</strong> priamo do poisťovní
+                    a správcovi dane
+                </li>
+                <li>
+                    Ročné zúčtovanie dane
+                </li>
+                <li>
+                    <strong>Registrácia</strong> zamestnancov a zamestnávateľa v <strong>poisťovniach</strong>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <div class="row mb-4">
+                <img class="flex-auto d-md-block rounded" alt="Účtovníctvo"
+                     style="width: 95%; height: 50%; min-height: 250px;"
+                     src="{{ url_for('static', filename='images/personalistika.jpg') }}">
+            </div>
+
+            <div class="row mb-4">
+                <!--<img class="flex-auto d-md-block rounded" alt="Účtovníctvo"-->
+                <!--style="width: 96%; height: 50%;"-->
+                <!--src="{{ url_for('static', filename='images/ucto.jpg') }}">-->
+
+                <!-- Sliding div starts here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

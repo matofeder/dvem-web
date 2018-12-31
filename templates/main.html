@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div id="content" class="container">
+
+    <div class="jumbotron jumbotron-main p-3 p-md-5 rounded">
+        <!--<h1 class="display-4 font-italic font-weight-bold mt-5 mb-3 text-white">Účtovníctvo DVEM s.r.o.</h1>-->
+        <h1 class="mt-4 col-lg-12 font-weight-bold text-white">Poskytujeme zázemie v oblasti jednoduchého, podvojného
+            účtovníctva a personálno-mzdovú
+            podporu.</h1>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="card flex-md-row mb-2 box-shadow h-md-250" style="min-height:250px">
+                <div class="card-body d-flex flex-column align-items-start services-intro">
+                    <h3 class="mb-0 mt-3 ml-3 font-weight-bold">
+                        VITAJTE NA NAŠEJ STRÁNKE!
+                    </h3>
+
+                    <ul class="card-text mb-auto mt-3">
+                        <li>Všetko potrebné vybavíte na jednom mieste</li>
+                        <li>Zabezpečíme Vám bezpečnosť uchovania dát</li>
+                        <li>Profesionálny prístup k spracovaniu agendy</li>
+                        <li>Lojalitu, odbornosť a diskrétnosť</li>
+                        <li>Tím s dlhodobými skúsenosťami a neustálym preškolovaním</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <a class="text-dark" href="/sluzby-uctovnictvo">
+                <div class="card flex-md-row mb-2 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start services">
+                        <h3 class="mb-0 mt-3 service-title">
+                            Účtovníctvo
+                        </h3>
+                        <p class="card-text mb-auto mt-3">Kompletné vedenie jednoduchého a podvojného účtovníctva pre
+                            registrovaného platiteľa DPH alebo neplatiteľa DPH.</p>
+                    </div>
+                    <img class="card-img-right flex-auto d-none d-md-block rounded-right" alt="Účtovníctvo"
+                         style="min-height: 250px; min-width: 270px; height: 250px; width: 270px"
+                         src="{{ url_for('static', filename='images/ucto.jpg') }}">
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <a class="text-dark" href="/sluzby-dane">
+                <div class="card flex-md-row mb-2 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start services">
+                        <h3 class="mb-0 mt-3 service-title">
+                            Dane
+                        </h3>
+                        <p class="card-text mb-auto mt-3">Spracovanie daňového priznania k dani z príjmov, daň
+                            z pridanej
+                            hodnoty, daň z motorových vozidiel, daň z nehnuteľnosti.</p>
+                    </div>
+                    <img class="card-img-right flex-auto d-none d-md-block rounded-right" alt="Dane"
+                         style="min-height: 250px; min-width: 270px; height: 250px; width: 270px"
+                         src="{{ url_for('static', filename='images/dane.jpg') }}">
+                </div>
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a class="text-dark" href="/sluzby-mzdy">
+                <div class="card flex-md-row mb-2 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start services">
+                        <h3 class="mb-0 mt-3 service-title">
+                            Mzdy a personalistika
+                        </h3>
+                        <p class="card-text mb-auto mt-3">Spracovanie miezd zamestnancom.</p>
+                    </div>
+                    <img class="card-img-right flex-auto d-none d-md-block rounded-right" alt="Mzdy a personalistika"
+                         style="min-height: 250px; min-width: 270px; height: 250px; width: 270px"
+                         src="{{ url_for('static', filename='images/personalistika.jpg') }}">
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

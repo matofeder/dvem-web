@@ -1,0 +1,525 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<!--<script>-->
+<!--$(document).ready(function () {-->
+<!--$('#navigation').click(function () {-->
+<!--$('#navigation-bar').removeClass('fixed-top');-->
+<!--$('#navigation-jumbo').removeClass('jumbotron-pages');-->
+<!--$('#navigation-jumbo').addClass('jumbotron-pages-move');-->
+<!--$('#navigation-title').removeClass('mt-5');-->
+<!--$('#navigation-title').addClass('mt-3');-->
+<!--});-->
+<!--});-->
+<!--</script>-->
+
+<div id="content" class="container">
+
+    <div id="navigation-jumbo" class="jumbotron jumbotron-pages">
+        <h1 id="navigation-title" class="text-center mt-5 text-white font-weight-bold">CENNÍK</h1>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-9">
+
+            <h4 class="text-justify font-weight-bold mb-4">
+                Prinášame vám prehľadný cenník za naše služby.
+            </h4>
+
+
+            <ul>
+                <li>
+                    <strong>Cena</strong> sa odvíja od počtu dokladov za príslušné obdobie (mesiac, kvartál, rok).
+                </li>
+                <li>
+                    <strong>Môžete si vybrať medzi</strong> <i><strong>cenou za položku</strong></i> (ak poznáte počet
+                    vašich
+                    dokladov,
+                    ktoré potrebujete spracovať) alebo <i><strong>paušálnou cenou</strong></i> (ak počet vašich dokladov
+                    viete
+                    odhadnúť na stovky).
+                </li>
+                <li>
+                    <strong>Ak sa neviete rozhodnúť</strong>, ktorá cena je pre vás výhodnejšia, nevadí.
+                    Počas našej spolupráce je možné cenu za spracovanie účtovníctva prispôsobiť vašim potrebám a
+                    možnostiam, podľa aktuálnych okolností.
+                </li>
+                <li>
+                    <strong>Položka</strong> je zápis v účtovnom denníku, pričom jeden účtovný doklad napr. faktúra,
+                    pokladničný
+                    doklad predstavuje približne v priemere u platiteľa DPH 3 – 5 účtovných položiek, čo závisí od
+                    spôsobu evidencie dokladov firmy, členenia účtovných prípadov, požiadaviek klienta na podrobnosť
+                    sledovania nákladov, výnosov, stredísk, a v neposlednom rade určuje počet položiek aj systém ako
+                    funguje účtovný SW.
+                </li>
+            </ul>
+
+        </div>
+        <div class="col-md-3">
+            <div class="row mb-4">
+                <img class="flex-auto d-md-block rounded" alt="Účtovníctvo"
+                     style="width: 95%; height: 50%; min-height: 250px;"
+                     src="{{ url_for('static', filename='images/price.jpg') }}">
+            </div>
+
+        </div>
+    </div>
+
+
+    <ul class="nav nav-tabs justify-content-center mt-3" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="jednoduche-uctovnictvo-tab" data-toggle="tab" href="#jednoduche-uctovnictvo"
+               role="tab" aria-controls="jednoduche-uctovnictvo"
+               aria-selected="true">Jednoduché účtovníctvo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="podvojne-uctovnictvo-tab" data-toggle="tab" href="#podvojne-uctovnictvo" role="tab"
+               aria-controls="podvojne-uctovnictvo"
+               aria-selected="false">Podvojné účtovníctvo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="mzdy-personalistika-tab" data-toggle="tab" href="#mzdy-personalistika" role="tab"
+               aria-controls="mzdy-personalistika"
+               aria-selected="false">Mzdy a personalistika</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="sluzby-ostatne-tab" data-toggle="tab" href="#sluzby-ostatne" role="tab"
+               aria-controls="sluzby-ostatne"
+               aria-selected="false">Služby účtované osobitne</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="jednoduche-uctovnictvo" role="tabpanel"
+             aria-labelledby="jednoduche-uctovnictvo-tab">
+
+            <div class="jumbotron jumbotron-yellow">
+                <h3 class="text-center font-weight-bold">Jednoduché účtovníctvo</h3>
+            </div>
+
+            <div id="polozkova-cena-jednoduche">
+                <h4 class="text-center font-weight-bold mb-4">
+                    Cena za položku <br> ak poznáte počet vašich dokladov,
+                    ktoré potrebujete spracovať
+                </h4>
+            </div>
+
+            <ul>
+                <li>
+                    <strong>Pri vyššom počte dokladov navrhujeme cenu dohodnúť individuálne.</strong>
+                </li>
+                <li>
+                    Minimálny mesačný náklad je vo výške <strong>50 € pre platcu DPH</strong> a vo výške <strong>40 €
+                    pre neplatcu DPH</strong>.
+                </li>
+                <li>
+                    V cene je zahrnutý kompletný mesačný účtovný servis, vrátane bežného poradenstva v oblasti
+                    daní a účtovníctva a spracovanie priznania k DPH, a jeho odoslanie správcovi dane.
+                </li>
+            </ul>
+
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet položiek</th>
+                    <th scope="col">Cena za položku pre platcu DPH</th>
+                    <th scope="col">Cena za položku pre neplatcu DPH</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1 – 100</td>
+                    <td>0,50 €</td>
+                    <td>0,40 €</td>
+                </tr>
+                <tr>
+                    <td>101 – 200</td>
+                    <td>0,45 €</td>
+                    <td>0,38 €</td>
+                </tr>
+                <tr>
+                    <td>201 – 300</td>
+                    <td>0,40 €</td>
+                    <td>0,35 €</td>
+                </tr>
+                <tr>
+                    <td>301 – 400</td>
+                    <td>0,38 €</td>
+                    <td>0,32 €</td>
+                </tr>
+                <tr>
+                    <td>401 – 600</td>
+                    <td>0,35 €</td>
+                    <td>0,30 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div id="pausalna-cena-jednoduche">
+                <h4 class="text-center font-weight-bold mb-4 mt-3">
+                    Paušálna cena <br> ak počet vašich dokladov viete odhadnúť na stovky
+                </h4>
+            </div>
+
+            <ul>
+                <li>
+                    <strong>Pri vyššom počte dokladov navrhujeme cenu dohodnúť individuálne.</strong>
+                </li>
+                <li>
+                    Minimálny mesačný paušál je vo výške <strong>50 € pre platcu DPH</strong> a vo výške <strong>40 €
+                    pre neplatcu DPH</strong>.
+                </li>
+                <li>
+                    V cene je zahrnutý kompletný mesačný účtovný servis, vrátane bežného poradenstva v oblasti
+                    daní a účtovníctva a spracovanie priznania k DPH, a jeho odoslanie správcovi dane.
+                </li>
+            </ul>
+
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet položiek</th>
+                    <th scope="col">Cena mesačného paušálu pre platcu DPH</th>
+                    <th scope="col">Cena mesačného paušálu pre neplatcu DPH</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1 – 100</td>
+                    <td>50 €</td>
+                    <td>40 €</td>
+                </tr>
+                <tr>
+                    <td>101 – 200</td>
+                    <td>90 €</td>
+                    <td>80 €</td>
+                </tr>
+                <tr>
+                    <td>201 – 300</td>
+                    <td>120 €</td>
+                    <td>100 €</td>
+                </tr>
+                <tr>
+                    <td>301 – 400</td>
+                    <td>150 €</td>
+                    <td>130 €</td>
+                </tr>
+                <tr>
+                    <td>401 – 600</td>
+                    <td>210 €</td>
+                    <td>180 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="tab-pane fade" id="podvojne-uctovnictvo" role="tabpanel" aria-labelledby="podvojne-uctovnictvo-tab">
+
+
+            <div class="jumbotron jumbotron-yellow">
+                <h3 class="text-center font-weight-bold">Podvojné účtovníctvo</h3>
+            </div>
+            <div id="polozkova-cena">
+                <h4 class="text-center font-weight-bold mb-4">
+                    Cena za položku <br> ak poznáte počet vašich dokladov,
+                    ktoré potrebujete spracovať
+                </h4>
+            </div>
+
+            <ul>
+                <li>
+                    <strong>Pri vyššom počte dokladov navrhujeme cenu dohodnúť individuálne.</strong>
+                </li>
+                <li>
+                    Minimálny mesačný náklad je vo výške <strong>90 € pre platcu DPH</strong> a vo výške <strong>80 €
+                    pre neplatcu DPH</strong>.
+                </li>
+                <li>
+                    V cene je zahrnutý kompletný mesačný účtovný servis, vrátane bežného poradenstva v oblasti
+                    daní a účtovníctva a spracovanie priznania k DPH, a jeho odoslanie správcovi dane.
+                </li>
+            </ul>
+
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet položiek</th>
+                    <th scope="col">Cena za položku pre platcu DPH</th>
+                    <th scope="col">Cena za položku pre neplatcu DPH</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1 – 100</td>
+                    <td>0,90 €</td>
+                    <td>0,80 €</td>
+                </tr>
+                <tr>
+                    <td>101 – 200</td>
+                    <td>0,85 €</td>
+                    <td>0,75 €</td>
+                </tr>
+                <tr>
+                    <td>201 – 300</td>
+                    <td>0,80 €</td>
+                    <td>0,70 €</td>
+                </tr>
+                <tr>
+                    <td>301 – 400</td>
+                    <td>0,78 €</td>
+                    <td>0,68 €</td>
+                </tr>
+                <tr>
+                    <td>401 – 600</td>
+                    <td>0,75 €</td>
+                    <td>0,65 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div id="pausalna-cena">
+                <h4 class="text-center font-weight-bold mb-4 mt-3">
+                    Paušálna cena <br> ak počet vašich dokladov viete odhadnúť na stovky
+                </h4>
+            </div>
+
+            <ul>
+                <li>
+                    <strong>Pri vyššom počte dokladov navrhujeme cenu dohodnúť individuálne.</strong>
+                </li>
+                <li>
+                    Minimálny mesačný paušál je vo výške <strong>90 € pre platcu DPH</strong> a vo výške <strong>80 €
+                    pre neplatcu DPH</strong>.
+                </li>
+                <li>
+                    V cene je zahrnutý kompletný mesačný účtovný servis, vrátane bežného poradenstva v oblasti
+                    daní a účtovníctva a spracovanie priznania k DPH, a jeho odoslanie správcovi dane.
+                </li>
+            </ul>
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet položiek</th>
+                    <th scope="col">Cena mesačného paušálu pre platcu DPH</th>
+                    <th scope="col">Cena mesačného paušálu pre neplatcu DPH</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1 – 100</td>
+                    <td>90 €</td>
+                    <td>80 €</td>
+                </tr>
+                <tr>
+                    <td>101 – 200</td>
+                    <td>170 €</td>
+                    <td>150 €</td>
+                </tr>
+                <tr>
+                    <td>201 – 300</td>
+                    <td>240 €</td>
+                    <td>210 €</td>
+                </tr>
+                <tr>
+                    <td>301 – 400</td>
+                    <td>310 €</td>
+                    <td>270 €</td>
+                </tr>
+                <tr>
+                    <td>401 – 600</td>
+                    <td>450 €</td>
+                    <td>390 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+        <div class="tab-pane fade" id="mzdy-personalistika" role="tabpanel" aria-labelledby="mzdy-personalistika-tab">
+
+            <div class="jumbotron jumbotron-yellow">
+                <h3 class="text-center font-weight-bold">Mzdy a personalistika</h3>
+            </div>
+
+            <div>
+                <h4 class="text-center font-weight-bold mb-4">
+                    Spracovanie mzdy zamestnanca
+                </h4>
+            </div>
+
+            <ul>
+                <li>
+                    V cene je zahrnuté výpočet mzdy, zaslanie hlásení do poisťovní a na daňový úrad,
+                    zaslanie výplatných pások zodpovednej osobe.
+                </li>
+                <li>
+                    Cena platí pre klientov, ktorým spracovávame
+                    mesačne účtovníctvo, alebo majú viac ako troch zamestnancov.
+                </li>
+                <li>
+                    Pokiaľ spracovávame pre klienta len mzdy,
+                    bez účtovníctva, minimálny mesačný paušál je <strong>35 €</strong>.
+                </li>
+                <li>
+                    <strong>Pri väčšom rozsahu zamestnancov vieme dohodnúť individuálnu cenu.</strong>
+                </li>
+            </ul>
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet osôb</th>
+                    <th scope="col">Cena za mesiac</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>8 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <h4 class="text-center font-weight-bold mb-4">
+                    Ročné zúčtovanie dane zo závislej činnosti
+                </h4>
+            </div>
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet osôb</th>
+                    <th scope="col">Cena za službu</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>10 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <h4 class="text-center font-weight-bold mb-4">
+                    Registrácia nového zamestnanca v poisťovniach a zadanie jeho dát do systému
+                </h4>
+            </div>
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet osôb</th>
+                    <th scope="col">Cena za službu</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>4 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <h4 class="text-center font-weight-bold mb-4">
+                    Odhláška zamestnanca z poisťovní a vystavenie výstupných dokladov
+                </h4>
+            </div>
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Počet osôb</th>
+                    <th scope="col">Cena za službu</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>4 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <h4 class="text-center font-weight-bold mb-4">
+                    Registrácia zamestnávateľa v poisťovniach (jednorázovo pri začatí zamestnávania osôb)
+                </h4>
+            </div>
+
+            <ul>
+                <li>
+                    <strong>Spolu za všetky poisťovne</strong> (je potrebné osobné vybavenie)
+                </li>
+            </ul>
+
+            <table class="table table-hover text-center">
+                <thead>
+                <tr>
+                    <th scope="col">Cena za službu</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>50 €</td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+        <div class="tab-pane fade" id="sluzby-ostatne" role="tabpanel" aria-labelledby="sluzby-ostatne-tab">
+
+            <div class="jumbotron jumbotron-yellow">
+                <h3 class="text-center font-weight-bold">Služby účtované osobitne</h3>
+            </div>
+
+            <ul>
+                <li>
+                    Ročná účtovná závierka vrátane všetkých príloh (podvojné účtovníctvo) <strong>od 120€</strong>
+                    (podľa rozsahu a náročnosti)
+                </li>
+                <li>
+                    Ročná účtovná závierka vrátanie všetkých príloh (jednoduché účtovníctvo) <strong>od 60€</strong>
+                    (podľa rozsahu a náročnosti)
+                </li>
+                <li>
+                    Daň z motorových vozidiel <strong>5€ / vozidlo</strong>
+                </li>
+                <li>
+                    Vypracovanie vnútropodnikových smerníc <strong>od 15€ / smernica</strong>
+                </li>
+                <li>
+                    Štatistické výkazy, reporty, prehľady podľa potrieb - <strong>cena dohodou</strong>
+                </li>
+                <li>
+                    Vedenie skladu podľa rozsahu a náročnosti - <strong>cena dohodou</strong>
+                </li>
+                <li>
+                    Kniha jázd – <strong>10€</strong> 1-3 tankovania za mesiac / 1 vozidlo. Viac tankovaní - <strong>cena
+                    dohodou</strong>
+                </li>
+                <li>
+                    Výkaz pre colný úrad - <strong>cena dohodou</strong>
+                </li>
+                <li>
+                    INTRASTAT - <strong>cena dohodou</strong>
+                </li>
+                <li>
+                    Daň z nehnuteľnosti - <strong>cena dohodou</strong>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

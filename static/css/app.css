@@ -76,7 +76,7 @@ html {
 .services {
     background: #f8f5ba;
     flex: 1;
-    max-width: content-box;
+    max-width: 100%;
 }
 
 .services-intro {

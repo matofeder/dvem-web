@@ -1,6 +1,9 @@
 html {
   overflow-y: scroll;
 }
+
+.child { width: 100%; }
+
 .container {
     padding-left: 2px;
     padding-right: 2px;

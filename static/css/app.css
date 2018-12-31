@@ -75,6 +75,7 @@ html {
 
 .services {
     background: #f8f5ba;
+    flex: 1;
     max-width: content-box;
 }
 

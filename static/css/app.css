@@ -29,6 +29,7 @@ html {
     margin-bottom: 1rem;
     border-radius: 0.3rem;
     min-height: 500px;
+    filter: none !important;
 }
 
 .jumbotron-pages {
@@ -37,6 +38,7 @@ html {
     margin-top: 4rem;
     border-radius: 0.3rem;
     min-height: 100px;
+    filter: none !important;
 }
 
 /*.jumbotron-pages-move {*/
@@ -53,6 +55,7 @@ html {
     margin-bottom: 2rem;
     border-radius: 0.3rem;
     min-height: 40px;
+    filter: none !important;
 }
 
 .navbar a.nav-link {
@@ -63,22 +66,25 @@ html {
 .navbar a:hover  {
   background: inherit;
   font-weight: bold;
+  filter: none !important;
 }
 
 .navbar a:active  {
   background: inherit;
   font-weight: bold;
+  filter: none !important;
 }
 
 
 .services {
     background: #f6f3a2b8;
     max-width: content-box;
-
+    filter: none !important;
 }
 
 .services-intro {
     background: #6dbe01a1;
+    filter: none !important;
     /*background-image: linear-gradient(to bottom right, #6dbe01a1, yellow);*/
 }
 
@@ -95,10 +101,11 @@ a:hover .service-title {
 .nav-tabs > li > a:focus,
 .nav-tabs > li > a:hover {
   background-color: #f6f3a2b8 !important;
+  filter: none !important;
 }
-
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
     background-color: #f6f3a2b8;
+    filter: none !important;
 }
 

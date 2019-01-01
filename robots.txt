@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://dvem-web-staging.herokuapp.com/sitemap.xml

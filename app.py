@@ -1,4 +1,5 @@
 import logging
+import pytz
 from datetime import datetime
 from smtplib import SMTPException
 
@@ -53,7 +54,7 @@ def form_data():
     email = request.form['email']
     text = request.form['text']
 
-    now = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now())
+    now = '{0:%Y-%m-%d %H:%M:%S}'.format(datetime.now(pytz.timezone('Europe/Bratislava')))
     form = f"Cas: {now}\nMeno: {name}\nTelefon: {phone}\nEmail: {email}\nText: {text}\n"
 
     try:

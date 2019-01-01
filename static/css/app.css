@@ -79,10 +79,6 @@ html {
     max-width: 100%;
 }
 
-ie-width {
-    max-width: 100%;
-}
-
 .services-intro {
     background: #a2d45e;
     /*background-image: linear-gradient(to bottom right, #6dbe01a1, yellow);*/

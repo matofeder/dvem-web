@@ -3,7 +3,7 @@ import pytz
 from datetime import datetime
 from smtplib import SMTPException
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 from flask_bootstrap import Bootstrap
 
 from loggers import setup_logging
@@ -14,6 +14,12 @@ log = logging.getLogger(__name__)
 
 app = Flask(__name__)
 Bootstrap(app)
+
+
+@app.route('/robots.txt')
+@app.route('/sitemap.xml')
+def static_from_root():
+    return send_from_directory('', request.path[1:])
 
 
 @app.route('/')

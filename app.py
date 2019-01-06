@@ -75,3 +75,7 @@ def form_data():
 
 if __name__ == '__main__':
     app.run()
+
+
+# TODO Užitočné odkazy sekcia
+# http://www.szco.sk/Aktuality-pre-podnikatelov

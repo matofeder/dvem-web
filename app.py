@@ -17,13 +17,13 @@ Bootstrap(app)
 
 # TLS: Let's encrypt validation file for uctovnictvo-dvem.sk
 @app.route('/.well-known/acme-challenge/yUJ7xavQQQejCBCnXMHnNpTunxtxQ6BngcqkicGVwgA')
-def static_from_root():
+def static_from_ssl_aname():
     return send_from_directory('ssl', 'uctovnictvo-dvem.sk')
 
 
 # TLS: Let's encrypt validation file for www.uctovnictvo-dvem.sk
 @app.route('/.well-known/acme-challenge/luiHuUgfLA7WptvhIK2EdcZOm7c7cV4Jea_E1llcMWw')
-def static_from_root():
+def static_from_ssl_cname():
     return send_from_directory('ssl', 'www.uctovnictvo-dvem.sk')
 
 

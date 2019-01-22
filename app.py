@@ -15,6 +15,17 @@ log = logging.getLogger(__name__)
 app = Flask(__name__)
 Bootstrap(app)
 
+# TLS: Let's encrypt validation file for uctovnictvo-dvem.sk
+@app.route('/.well-known/acme-challenge/yUJ7xavQQQejCBCnXMHnNpTunxtxQ6BngcqkicGVwgA')
+def static_from_root():
+    return send_from_directory('ssl', 'uctovnictvo-dvem.sk')
+
+
+# TLS: Let's encrypt validation file for www.uctovnictvo-dvem.sk
+@app.route('/.well-known/acme-challenge/luiHuUgfLA7WptvhIK2EdcZOm7c7cV4Jea_E1llcMWw')
+def static_from_root():
+    return send_from_directory('ssl', 'www.uctovnictvo-dvem.sk')
+
 
 @app.route('/robots.txt')
 @app.route('/sitemap.xml')

@@ -3,7 +3,7 @@
 EMAIL_TO = ['uctovnictvo.dvem@gmail.com']
 
 EMAIL_FROM = 'formular.uctovnictvo.dvem@gmail.com'
-EMAIL_FROM_PASS = 'DA4KdwGlHLhAbQ8lPdTI'
+EMAIL_FROM_PASS =  '79d889d3491af1d2411b1340946535f566b3b69c1960e83e3cbf215e9c0c9b61'
 
 # === LOGGING ===
 
